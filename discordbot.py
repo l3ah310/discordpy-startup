@@ -24,8 +24,6 @@ bot.run(token)
 import discord
 from googletrans import Translator
 
-TOKEN = 'ODQyNTkwMzc3Njg1MTU1OTEy.YJ3hcA.t6Yw5USB0ig4d7yeUUlxW_jXijs'
-
 client = discord.Client()
 translator = Translator()
 
@@ -77,4 +75,4 @@ async def on_message(message):
         m = 'この文字列の言語はたぶん ' + detect.lang + ' です。'
         await message.channel.send(m)
 
-client.run(TOKEN)
+client.run(token)
