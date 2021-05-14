@@ -17,7 +17,7 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
     
-async def on_message(message):
+async def t(message):
     if message.author.bot:
         return
     say = message.content
