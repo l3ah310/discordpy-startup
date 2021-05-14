@@ -35,7 +35,7 @@ async def on_ready():
     print(client.user.id)
     print('--------------')
 
-@bot.event
+@bot.command()
 async def on_message(message):
     if message.author.bot:
         return
