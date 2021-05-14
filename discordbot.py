@@ -16,6 +16,16 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+    
+async def on_message(message):
+    if message.author.bot:
+        return
+    say = message.content
+        s = say[8:]
+        detect = translator.detect(s)
+        m = 'この文字列の言語はたぶん ' + detect.lang + ' です。'
+        await message.channel.send(m)
+
 
 
 bot.run(token)
